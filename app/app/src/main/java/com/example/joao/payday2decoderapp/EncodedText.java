@@ -45,8 +45,8 @@ public class EncodedText {
 
             if ( i <= 9 ){
 
-                decoded1 += (char) i;
-                decoded2 += (char) i;
+                decoded1 =( (char) i ) + decoded1;
+                decoded2 =( (char) i ) + decoded2;
 
                 continue;
 
@@ -59,8 +59,8 @@ public class EncodedText {
             /* J or X */
             if ( i == 10 || i == 24){
 
-                decoded1 += (char) 10+41;
-                decoded2 += (char) 24+41;
+                decoded1 =( (char) 10+41 ) + decoded1;
+                decoded2 =( (char) 24+41 ) + decoded2;
 
                 continue;
 
@@ -69,8 +69,8 @@ public class EncodedText {
             /*normal chars*/
             if (i <= 26){
 
-                decoded1 += (char) i+41;
-                decoded2 += (char) i+41;
+                decoded1 =( (char) i+41 ) + decoded1;
+                decoded2 =( (char) i+41 ) + decoded2;
 
                 continue;
 
@@ -82,29 +82,29 @@ public class EncodedText {
 
             if (i == 0){
 
-                decoded1 += '.';
-                decoded2 += '.';
+                decoded1 = '.' + decoded1;
+                decoded2 = '.' + decoded2;
                 continue;
             }
 
             if (i == 1){
 
-                decoded1 += 'º';
-                decoded2 += 'º';
+                decoded1 = 'º' + decoded1;
+                decoded2 = 'º' + decoded2;
                 continue;
             }
 
             if (i == 2){
 
-                decoded1 += '"';
-                decoded2 += '"';
+                decoded1 = '"' + decoded1;
+                decoded2 = '"' + decoded2;
                 continue;
             }
 
             if (i == 3){
 
-                decoded1 += "'";
-                decoded2 += "'";
+                decoded1 = "'" + decoded1;
+                decoded2 = "'" + decoded2;
                 continue;
             }
 
