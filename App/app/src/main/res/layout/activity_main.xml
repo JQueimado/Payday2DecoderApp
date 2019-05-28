@@ -4,275 +4,464 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TableLayout
+    <TextView
+        android:id="@+id/textDebug"
+        android:layout_width="247dp"
+        android:layout_height="45dp"
+        android:text="TextView" />
+
+
+    <LinearLayout
         android:id="@+id/Keybord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp">
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="43dp"
+            android:layout_weight="4"
+            android:padding="2dp">
 
-            <Button
-                android:id="@+id/button40"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/a" />
 
-            <Button
-                android:id="@+id/button41"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/b" />
 
-            <Button
-                android:id="@+id/button42"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/c" />
 
-            <Button
-                android:id="@+id/button43"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/d" />
 
-            <Button
-                android:id="@+id/button44"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonE"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/e" />
 
-            <Button
-                android:id="@+id/button45"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/f" />
 
-            <Button
-                android:id="@+id/button46"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/g" />
 
-            <Button
-                android:id="@+id/button47"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/h" />
 
-            <Button
-                android:id="@+id/button48"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/i" />
 
-            <Button
-                android:id="@+id/button39"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
-        </TableRow>
+            <ImageButton
+                android:id="@+id/buttonJX"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/jx" />
 
-        <TableRow
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="42dp"
+            android:layout_weight="4"
+            android:padding="2dp">
 
-            <Button
-                android:id="@+id/button49"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonK"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/k" />
 
-            <Button
-                android:id="@+id/button50"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/l" />
 
-            <Button
-                android:id="@+id/button51"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/m" />
 
-            <Button
-                android:id="@+id/button52"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n" />
 
-            <Button
-                android:id="@+id/button53"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonO"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/o" />
 
-            <Button
-                android:id="@+id/button54"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/p" />
 
-            <Button
-                android:id="@+id/button55"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonQ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/q" />
 
-            <Button
-                android:id="@+id/button56"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/r" />
 
-            <Button
-                android:id="@+id/button57"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/s" />
 
-            <Button
-                android:id="@+id/button58"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
-        </TableRow>
+            <ImageButton
+                android:id="@+id/buttonT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/t" />
 
-        <TableRow
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="44dp"
+            android:layout_weight="4"
+            android:padding="2dp">
 
-            <Button
-                android:id="@+id/button59"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonU"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/u" />
 
-            <Button
-                android:id="@+id/button60"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/v" />
 
-            <Button
-                android:id="@+id/button61"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/w" />
 
-            <Button
-                android:id="@+id/button62"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonXJ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/xj" />
 
-            <Button
-                android:id="@+id/button63"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/y" />
 
-            <Button
-                android:id="@+id/button64"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonZ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/z" />
 
-            <Button
-                android:id="@+id/button65"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n0" />
 
-            <Button
-                android:id="@+id/button66"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n1" />
 
-            <Button
-                android:id="@+id/button67"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n2" />
 
-            <Button
-                android:id="@+id/button68"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n3" />
 
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="42dp"
+            android:layout_weight="4"
+            android:padding="2dp">
 
-            <Button
-                android:id="@+id/button70"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n4" />
 
-            <Button
-                android:id="@+id/button71"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n5" />
 
-            <Button
-                android:id="@+id/button72"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n6" />
 
-            <Button
-                android:id="@+id/button73"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n7" />
 
-            <Button
-                android:id="@+id/button74"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n8" />
 
-            <Button
-                android:id="@+id/button75"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/n9" />
 
-            <Button
-                android:id="@+id/button76"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonDot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dot" />
 
-            <Button
-                android:id="@+id/button77"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonUpperComa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/upper_coma" />
 
-            <Button
-                android:id="@+id/button78"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonDubbleUpperComa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/upper_dubble_coma" />
 
-            <Button
-                android:id="@+id/button79"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="Button" />
+            <ImageButton
+                android:id="@+id/buttonSpace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:onClick="on_Key_Press"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/space" />
 
-        </TableRow>
-    </TableLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:text="Translate"
+            android:onClick="done_button"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
