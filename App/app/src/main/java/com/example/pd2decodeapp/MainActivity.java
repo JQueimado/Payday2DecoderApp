@@ -11,6 +11,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     List<Integer> codes;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         codes = new LinkedList<>();
+        tv = (TextView) findViewById(R.id.textDebug);
     }
 
     private String translate_word()
@@ -147,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if(i>24 && i<35)
-                ret += Integer.toBinaryString(i-25);
+                ret += Integer.toString(i-25);
 
         }
 
@@ -156,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void done_button(View v)
     {
-        TextView tv = (TextView) findViewById(R.id.textDebug);
         tv.setText( translate_word() );
         codes.clear();
     }
@@ -164,8 +165,6 @@ public class MainActivity extends AppCompatActivity {
     public void on_Key_Press(View v)
     {
         int code = -1;
-
-        TextView tv = (TextView) findViewById(R.id.textDebug);
 
         switch (v.getId())
         {
@@ -332,8 +331,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         codes.add(code);
-
-        tv.setText( Integer.toString(code) );
     }
 
 }

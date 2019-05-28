@@ -9,9 +9,10 @@
 
     <TextView
         android:id="@+id/textDebug"
-        android:layout_width="247dp"
-        android:layout_height="45dp"
-        android:text="TextView" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:text="" />
 
 
     <LinearLayout
