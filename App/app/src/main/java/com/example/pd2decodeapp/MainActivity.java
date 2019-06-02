@@ -22,17 +22,6 @@ public class MainActivity extends AppCompatActivity {
         tv = (TextView) findViewById(R.id.textDebug);
     }
 
-    private String translate_word()
-    {
-        return translator.translate();
-    }
-
-    public void done_button(View v)
-    {
-        tv.setText( translate_word() );
-        translator.clear();
-    }
-
     public void on_Key_Press(View v)
     {
         int code = -1;
@@ -202,6 +191,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
         translator.add(code);
+        tv.setText(translator.translate());
+    }
+
+    public void clear_button(View v)
+    {
+        translator.clear();
+        tv.setText("");
+    }
+
+    public void line_button(View v)
+    {
+        translator.line();
     }
 
 }

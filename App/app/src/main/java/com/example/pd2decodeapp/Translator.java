@@ -6,10 +6,12 @@ import java.util.List;
 public class Translator
 {
     List<Integer> codes;
+    List<String> lines;
 
     public  Translator()
     {
         this.codes = new LinkedList<>();
+        this.lines = new LinkedList<>();
     }
 
     public static String singlechar(int i)
@@ -111,7 +113,7 @@ public class Translator
         return "Nope";
     }
 
-    public String translate()
+    public String translate_cur_line()
     {
         String ret = "";
         for(int i : this.codes)
@@ -123,8 +125,32 @@ public class Translator
 
     public void clear()
     {
-        codes.clear();
+        this.codes.clear();
+        this.lines.clear();
     }
 
     public void add(int i){ codes.add(i); }
+
+    public void line()
+    {
+        this.lines.add( this.translate_cur_line() );
+        this.codes.clear();
+    }
+
+    public String translate()
+    {
+        String ret = "";
+
+        for(String line : this.lines)
+        {
+            ret += line;
+        }
+
+        if(!codes.isEmpty())
+        {
+            ret+= this.translate_cur_line();
+        }
+
+        return ret;
+    }
 }

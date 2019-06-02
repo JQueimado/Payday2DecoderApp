@@ -628,14 +628,31 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonDone"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:text="Translate"
-            android:onClick="done_button"/>
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:padding="4dp"
+                android:text="Clear"
+                android:onClick="clear_button"/>
+
+            <Button
+                android:id="@+id/buttonLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:padding="4dp"
+                android:text="Line"
+                android:onClick="line_button"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
