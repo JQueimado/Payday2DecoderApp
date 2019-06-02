@@ -13,7 +13,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     Translator translator;
-    PrinterControler controler;
+    PrinterControler printer_controler;
     TextView tv;
 
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             translator = new Translator();
-            controler = new PrinterControler( (LinearLayout) findViewById(R.id.printer), translator );
+            printer_controler = new PrinterControler( (LinearLayout) findViewById(R.id.printer), translator );
             tv = (TextView) findViewById(R.id.textDebug);
         }
         catch (Exception e)
@@ -202,13 +202,14 @@ public class MainActivity extends AppCompatActivity {
 
         translator.add(code);
         tv.setText(translator.translate());
-        controler.refresh();
+        printer_controler.refresh();
     }
 
     public void clear_button(View v)
     {
         translator.clear();
         tv.setText("");
+        printer_controler.clear();
     }
 
     public void line_button(View v)

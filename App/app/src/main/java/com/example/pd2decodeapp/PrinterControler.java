@@ -23,11 +23,31 @@ public class PrinterControler {
 
         this.view = layout;
         this.translator = tr;
+
+        this.clear();
+
+    }
+
+    public void clear()
+    {
+        for(int i = 0; i<PRINTERSIZE; i++)
+        {
+            ImageView img = (ImageView) this.view.getChildAt(i);
+            img.setImageResource(0);
+        }
     }
 
     private void move()
     {
-
+        for(int i = PRINTERSIZE-1; i>=0; i--)
+        {
+            try {
+                ImageView view = (ImageView) this.view.getChildAt(i);
+                view.setImageResource(Translator.to_image(translator.codes.get(translator.codes.size() - (PRINTERSIZE - i) )));
+            }
+            catch (Exception e)
+            { }
+        }
     }
 
     public void refresh()
@@ -38,8 +58,13 @@ public class PrinterControler {
         }
         else
         {
-            ImageView image = (ImageView) this.view.getChildAt(translator.codes.size() - 1);
-            image.setImageResource( Translator.to_image( translator.codes.get( translator.codes.size()-1 )) );
+            try{
+                ImageView image = (ImageView) this.view.getChildAt(translator.codes.size() - 1);
+                int result = translator.codes.get( translator.codes.size()-1 );
+                image.setImageResource( Translator.to_image( result ) );
+            }
+            catch (Exception e)
+            {}
         }
     }
 }
