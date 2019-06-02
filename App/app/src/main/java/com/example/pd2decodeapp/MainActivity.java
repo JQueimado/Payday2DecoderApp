@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<Integer> codes;
+    Translator translator;
     TextView tv;
 
     @Override
@@ -18,148 +18,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        codes = new LinkedList<>();
+        translator = new Translator();
         tv = (TextView) findViewById(R.id.textDebug);
     }
 
     private String translate_word()
     {
-        String ret = "";
-
-        for(int i : codes)
-        {
-            switch (i)
-            {
-                case 0:
-                    ret += "A";
-                    break;
-
-                case 1:
-                    ret += "B";
-                    break;
-
-                case 2:
-                    ret += "C";
-                    break;
-
-                case 3:
-                    ret += "D";
-                    break;
-
-                case 4:
-                    ret += "E";
-                    break;
-
-                case 5:
-                    ret += "F";
-                    break;
-
-                case 6:
-                    ret += "G";
-                    break;
-
-                case 7:
-                    ret += "H";
-                    break;
-
-                case 8:
-                    ret += "I";
-                    break;
-
-                case 9:
-                    ret += "(J/X)";
-                    break;
-
-                case 10:
-                    ret += "K";
-                    break;
-
-                case 11:
-                    ret += "L";
-                    break;
-
-                case 12:
-                    ret += "M";
-                    break;
-
-                case 13:
-                    ret += "N";
-                    break;
-
-                case 14:
-                    ret += "O";
-                    break;
-
-                case 15:
-                    ret += "P";
-                    break;
-
-                case 16:
-                    ret += "Q";
-                    break;
-
-                case 17:
-                    ret += "R";
-                    break;
-
-                case 18:
-                    ret += "S";
-                    break;
-
-                case 19:
-                    ret += "T";
-                    break;
-
-                case 20:
-                    ret += "U";
-                    break;
-
-                case 21:
-                    ret += "V";
-                    break;
-
-                case 22:
-                    ret += "W";
-                    break;
-
-                case 23:
-                    ret += "Y";
-                    break;
-
-                case 24:
-                    ret += "Z";
-                    break;
-
-                case 35:
-                    ret += ".";
-                    break;
-
-                case 36:
-                    ret += "\'";
-                    break;
-
-                case 37:
-                    ret += "\"";
-                    break;
-
-                case 38:
-                    ret += " ";
-                    break;
-
-            }
-
-            if(i>24 && i<35)
-                ret += Integer.toString(i-25);
-
-        }
-
-        return ret;
+        return translator.translate();
     }
 
     public void done_button(View v)
     {
         tv.setText( translate_word() );
-        codes.clear();
+        translator.clear();
     }
 
     public void on_Key_Press(View v)
@@ -330,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        codes.add(code);
+        translator.add(code);
     }
 
 }

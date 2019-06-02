@@ -7,14 +7,188 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textDebug"
+    <!-- APP Body -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:text="" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
+        <!-- Text -->
+        <TextView
+            android:id="@+id/textDebug"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:text="HI"
+            android:layout_weight="2"/>
 
+        <!-- Printer -->
+        <LinearLayout
+            android:id="@+id/printer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            >
+
+            <ImageView
+                android:id="@+id/printer1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- KeyBoard -->
     <LinearLayout
         android:id="@+id/Keybord"
         android:layout_width="match_parent"
