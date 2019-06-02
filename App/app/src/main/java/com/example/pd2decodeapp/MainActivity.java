@@ -3,7 +3,9 @@ package com.example.pd2decodeapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     Translator translator;
+    PrinterControler controler;
     TextView tv;
 
     @Override
@@ -18,8 +21,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        translator = new Translator();
-        tv = (TextView) findViewById(R.id.textDebug);
+        try {
+            translator = new Translator();
+            controler = new PrinterControler( (LinearLayout) findViewById(R.id.printer), translator );
+            tv = (TextView) findViewById(R.id.textDebug);
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(this, "ERROR", Toast.LENGTH_LONG);
+        }
     }
 
     public void on_Key_Press(View v)
@@ -192,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
 
         translator.add(code);
         tv.setText(translator.translate());
+        controler.refresh();
     }
 
     public void clear_button(View v)

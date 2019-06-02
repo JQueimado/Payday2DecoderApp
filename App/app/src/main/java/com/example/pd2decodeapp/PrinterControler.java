@@ -1,5 +1,6 @@
 package com.example.pd2decodeapp;
 
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.LinkedList;
@@ -8,32 +9,37 @@ import java.util.List;
 public class PrinterControler {
 
     /* consts */
-    private static final int PRINTERSIZE = 20;
+    private static final int PRINTERSIZE = 19;
 
     /* class vars */
-    List<Integer> codes;
+    Translator translator;
     LinearLayout view;
-    int current;
 
     /* constructor */
-    public PrinterControler(LinearLayout layout)
+    public PrinterControler(LinearLayout layout, Translator tr) throws Exception
     {
+        if( layout.getId() != R.id.printer)
+            throw new Exception("View Error");
+
         this.view = layout;
-        this.codes = new LinkedList<>();
-        this.current = 0;
+        this.translator = tr;
     }
 
-    /* methods */
-    public void add(int i )
+    private void move()
     {
-        this.codes.add(i);
+
     }
 
-    private void refresh()
+    public void refresh()
     {
-        if( this.current != PRINTERSIZE )
+        if( translator.codes.size() > PRINTERSIZE )
         {
-
+            this.move();
+        }
+        else
+        {
+            ImageView image = (ImageView) this.view.getChildAt(translator.codes.size() - 1);
+            image.setImageResource( Translator.to_image( translator.codes.get( translator.codes.size()-1 )) );
         }
     }
 }
