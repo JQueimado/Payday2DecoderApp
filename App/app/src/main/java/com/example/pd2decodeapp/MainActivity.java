@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case 5:
-                    ret += "A";
+                    ret += "F";
                     break;
 
                 case 6:
