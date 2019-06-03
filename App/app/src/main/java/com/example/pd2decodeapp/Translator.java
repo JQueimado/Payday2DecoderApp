@@ -120,6 +120,8 @@ public class Translator
     {
         switch (i)
         {
+            case 0:
+                return R.drawable.a;
             case 1:
                 return R.drawable.b;
             case 2:
