@@ -3,14 +3,14 @@ package com.example.pd2decodeapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import java.util.LinkedList;
-import java.util.List;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<Integer> codes;
+    Translator translator;
+    PrinterController printer_controller;
     TextView tv;
 
     @Override
@@ -18,148 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        codes = new LinkedList<>();
-        tv = (TextView) findViewById(R.id.textDebug);
-    }
-
-    private String translate_word()
-    {
-        String ret = "";
-
-        for(int i : codes)
-        {
-            switch (i)
-            {
-                case 0:
-                    ret += "A";
-                    break;
-
-                case 1:
-                    ret += "B";
-                    break;
-
-                case 2:
-                    ret += "C";
-                    break;
-
-                case 3:
-                    ret += "D";
-                    break;
-
-                case 4:
-                    ret += "E";
-                    break;
-
-                case 5:
-                    ret += "A";
-                    break;
-
-                case 6:
-                    ret += "G";
-                    break;
-
-                case 7:
-                    ret += "H";
-                    break;
-
-                case 8:
-                    ret += "I";
-                    break;
-
-                case 9:
-                    ret += "(J/X)";
-                    break;
-
-                case 10:
-                    ret += "K";
-                    break;
-
-                case 11:
-                    ret += "L";
-                    break;
-
-                case 12:
-                    ret += "M";
-                    break;
-
-                case 13:
-                    ret += "N";
-                    break;
-
-                case 14:
-                    ret += "O";
-                    break;
-
-                case 15:
-                    ret += "P";
-                    break;
-
-                case 16:
-                    ret += "Q";
-                    break;
-
-                case 17:
-                    ret += "R";
-                    break;
-
-                case 18:
-                    ret += "S";
-                    break;
-
-                case 19:
-                    ret += "T";
-                    break;
-
-                case 20:
-                    ret += "U";
-                    break;
-
-                case 21:
-                    ret += "V";
-                    break;
-
-                case 22:
-                    ret += "W";
-                    break;
-
-                case 23:
-                    ret += "Y";
-                    break;
-
-                case 24:
-                    ret += "Z";
-                    break;
-
-                case 35:
-                    ret += ".";
-                    break;
-
-                case 36:
-                    ret += "\'";
-                    break;
-
-                case 37:
-                    ret += "\"";
-                    break;
-
-                case 38:
-                    ret += " ";
-                    break;
-
-            }
-
-            if(i>24 && i<35)
-                ret += Integer.toString(i-25);
-
+        try {
+            translator = new Translator();
+            printer_controller = new PrinterController( (LinearLayout) findViewById(R.id.printer), translator );
+            tv = (TextView) findViewById(R.id.textDebug);
+            tv.setText("");
         }
-
-        return ret;
-    }
-
-    public void done_button(View v)
-    {
-        tv.setText( translate_word() );
-        codes.clear();
+        catch (Exception e)
+        {
+            Toast.makeText(this, "ERROR", Toast.LENGTH_LONG);
+        }
     }
 
     public void on_Key_Press(View v)
@@ -330,7 +198,22 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        codes.add(code);
+        translator.add(code);
+        tv.setText(translator.translate());
+        printer_controller.refresh();
+    }
+
+    public void clear_button(View v)
+    {
+        translator.clear();
+        tv.setText("");
+        printer_controller.clear();
+    }
+
+    public void line_button(View v)
+    {
+        translator.line();
+        printer_controller.clear();
     }
 
 }

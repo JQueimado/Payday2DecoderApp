@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,461 +8,682 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textDebug"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:text="" />
-
+    <!-- APP Body -->
 
     <LinearLayout
-        android:id="@+id/Keybord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Translation:"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <!-- Text -->
+        <TextView
+            android:id="@+id/textDebug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HI" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
 
+        <!-- Printer -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:layout_weight="4"
-            android:padding="2dp">
-
-            <ImageButton
-                android:id="@+id/buttonA"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/a" />
-
-            <ImageButton
-                android:id="@+id/buttonB"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/b" />
-
-            <ImageButton
-                android:id="@+id/buttonC"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/c" />
-
-            <ImageButton
-                android:id="@+id/buttonD"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/d" />
-
-            <ImageButton
-                android:id="@+id/buttonE"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/e" />
-
-            <ImageButton
-                android:id="@+id/buttonF"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/f" />
-
-            <ImageButton
-                android:id="@+id/buttonG"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/g" />
-
-            <ImageButton
-                android:id="@+id/buttonH"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/h" />
-
-            <ImageButton
-                android:id="@+id/buttonI"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/i" />
-
-            <ImageButton
-                android:id="@+id/buttonJX"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/jx" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:layout_weight="4"
-            android:padding="2dp">
-
-            <ImageButton
-                android:id="@+id/buttonK"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/k" />
-
-            <ImageButton
-                android:id="@+id/buttonL"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/l" />
-
-            <ImageButton
-                android:id="@+id/buttonM"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/m" />
-
-            <ImageButton
-                android:id="@+id/buttonN"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n" />
-
-            <ImageButton
-                android:id="@+id/buttonO"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/o" />
-
-            <ImageButton
-                android:id="@+id/buttonP"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/p" />
-
-            <ImageButton
-                android:id="@+id/buttonQ"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/q" />
-
-            <ImageButton
-                android:id="@+id/buttonR"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/r" />
-
-            <ImageButton
-                android:id="@+id/buttonS"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/s" />
-
-            <ImageButton
-                android:id="@+id/buttonT"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/t" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_weight="4"
-            android:padding="2dp">
-
-            <ImageButton
-                android:id="@+id/buttonU"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/u" />
-
-            <ImageButton
-                android:id="@+id/buttonV"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/v" />
-
-            <ImageButton
-                android:id="@+id/buttonW"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/w" />
-
-            <ImageButton
-                android:id="@+id/buttonXJ"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/xj" />
-
-            <ImageButton
-                android:id="@+id/buttonY"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/y" />
-
-            <ImageButton
-                android:id="@+id/buttonZ"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/z" />
-
-            <ImageButton
-                android:id="@+id/button0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n0" />
-
-            <ImageButton
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n1" />
-
-            <ImageButton
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n2" />
-
-            <ImageButton
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n3" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:layout_weight="4"
-            android:padding="2dp">
-
-            <ImageButton
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n4" />
-
-            <ImageButton
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n5" />
-
-            <ImageButton
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n6" />
-
-            <ImageButton
-                android:id="@+id/button7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n7" />
-
-            <ImageButton
-                android:id="@+id/button8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n8" />
-
-            <ImageButton
-                android:id="@+id/button9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/n9" />
-
-            <ImageButton
-                android:id="@+id/buttonDot"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/dot" />
-
-            <ImageButton
-                android:id="@+id/buttonUpperComa"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/upper_coma" />
-
-            <ImageButton
-                android:id="@+id/buttonDubbleUpperComa"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/upper_dubble_coma" />
-
-            <ImageButton
-                android:id="@+id/buttonSpace"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="10"
-                android:onClick="on_Key_Press"
-                android:padding="2dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/space" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/buttonDone"
+            android:id="@+id/printer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="4dp"
-            android:text="Translate"
-            android:onClick="done_button"/>
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/printer1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/printer20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/a"
+                android:layout_weight="20"
+                android:padding="2dp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <!-- KeyBoard -->
+        <LinearLayout
+            android:id="@+id/Keybord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_weight="4"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/buttonA"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/a" />
+
+                <ImageButton
+                    android:id="@+id/buttonB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b" />
+
+                <ImageButton
+                    android:id="@+id/buttonC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/c" />
+
+                <ImageButton
+                    android:id="@+id/buttonD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/d" />
+
+                <ImageButton
+                    android:id="@+id/buttonE"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/e" />
+
+                <ImageButton
+                    android:id="@+id/buttonF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/f" />
+
+                <ImageButton
+                    android:id="@+id/buttonG"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/g" />
+
+                <ImageButton
+                    android:id="@+id/buttonH"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/h" />
+
+                <ImageButton
+                    android:id="@+id/buttonI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/i" />
+
+                <ImageButton
+                    android:id="@+id/buttonJX"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/jx" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="4"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/buttonK"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/k" />
+
+                <ImageButton
+                    android:id="@+id/buttonL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/l" />
+
+                <ImageButton
+                    android:id="@+id/buttonM"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/m" />
+
+                <ImageButton
+                    android:id="@+id/buttonN"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n" />
+
+                <ImageButton
+                    android:id="@+id/buttonO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/o" />
+
+                <ImageButton
+                    android:id="@+id/buttonP"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/p" />
+
+                <ImageButton
+                    android:id="@+id/buttonQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/q" />
+
+                <ImageButton
+                    android:id="@+id/buttonR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/r" />
+
+                <ImageButton
+                    android:id="@+id/buttonS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s" />
+
+                <ImageButton
+                    android:id="@+id/buttonT"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/t" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_weight="4"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/buttonU"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/u" />
+
+                <ImageButton
+                    android:id="@+id/buttonV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/v" />
+
+                <ImageButton
+                    android:id="@+id/buttonW"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/w" />
+
+                <ImageButton
+                    android:id="@+id/buttonXJ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/xj" />
+
+                <ImageButton
+                    android:id="@+id/buttonY"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/y" />
+
+                <ImageButton
+                    android:id="@+id/buttonZ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/z" />
+
+                <ImageButton
+                    android:id="@+id/button0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n0" />
+
+                <ImageButton
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n1" />
+
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n2" />
+
+                <ImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="4"
+                android:padding="2dp">
+
+                <ImageButton
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n4" />
+
+                <ImageButton
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n5" />
+
+                <ImageButton
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n6" />
+
+                <ImageButton
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n7" />
+
+                <ImageButton
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n8" />
+
+                <ImageButton
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/n9" />
+
+                <ImageButton
+                    android:id="@+id/buttonDot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dot" />
+
+                <ImageButton
+                    android:id="@+id/buttonUpperComa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/upper_coma" />
+
+                <ImageButton
+                    android:id="@+id/buttonDubbleUpperComa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/upper_dubble_coma" />
+
+                <ImageButton
+                    android:id="@+id/buttonSpace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:onClick="on_Key_Press"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/space" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="4dp"
+                    android:text="Clear"
+                    android:onClick="clear_button"/>
+
+                <Button
+                    android:id="@+id/buttonLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="4dp"
+                    android:text="Line"
+                    android:onClick="line_button"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
