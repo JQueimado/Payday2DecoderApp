@@ -7,13 +7,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
     Translator translator;
-    PrinterControler printer_controler;
+    PrinterController printer_controller;
     TextView tv;
 
     @Override
@@ -23,8 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             translator = new Translator();
-            printer_controler = new PrinterControler( (LinearLayout) findViewById(R.id.printer), translator );
+            printer_controller = new PrinterController( (LinearLayout) findViewById(R.id.printer), translator );
             tv = (TextView) findViewById(R.id.textDebug);
+            tv.setText("");
         }
         catch (Exception e)
         {
@@ -202,19 +200,20 @@ public class MainActivity extends AppCompatActivity {
 
         translator.add(code);
         tv.setText(translator.translate());
-        printer_controler.refresh();
+        printer_controller.refresh();
     }
 
     public void clear_button(View v)
     {
         translator.clear();
         tv.setText("");
-        printer_controler.clear();
+        printer_controller.clear();
     }
 
     public void line_button(View v)
     {
         translator.line();
+        printer_controller.clear();
     }
 
 }

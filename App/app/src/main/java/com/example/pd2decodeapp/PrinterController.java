@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PrinterControler {
+public class PrinterController {
 
     /* consts */
     private static final int PRINTERSIZE = 19;
@@ -16,7 +16,7 @@ public class PrinterControler {
     LinearLayout view;
 
     /* constructor */
-    public PrinterControler(LinearLayout layout, Translator tr) throws Exception
+    public PrinterController(LinearLayout layout, Translator tr) throws Exception
     {
         if( layout.getId() != R.id.printer)
             throw new Exception("View Error");
